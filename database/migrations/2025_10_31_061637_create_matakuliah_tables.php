@@ -12,18 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('matakuliah', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('kode')->unique();
-            $table->string('nama_matakuliah');
-            $table->timestamps();
-        });
+    $table->uuid('id')->primary();
+    $table->string('kode')->unique();
+    $table->string('nama_matakuliah');
+    $table->timestamps();
+});
     }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
-    {
-        Schema::dropIfExists('matakuliah_tables');
-    }
+{
+    Schema::dropIfExists('absensis');
+}
 };
